@@ -1,0 +1,20 @@
+<div class="enter_section">
+    <img src="/images/burger.png" alt="">
+    <h1>Eat-Da-Burger</h1>
+
+    <div>
+        {{#each burgers}}
+        <p>{{this.id}}. {{this.burger_name}} <button id="devour">Devour!!</button></p>
+        {{/each}}
+    </div>
+
+    <form id="addBurgerForm" action="" method="POST">
+        <div>
+            <textarea name="" id="enter_text" cols="30" rows="10"></textarea>
+            <br>
+            <input id="text-enter-button" type="submit">
+            <p>Enter a burger you would like to eat!</p>
+        </div>
+    </form>
+
+</div>
