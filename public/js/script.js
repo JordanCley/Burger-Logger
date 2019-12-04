@@ -13,13 +13,18 @@ $(document).ready(function(){
     });
   })
 
-  $(".devour").click(()=>{
-    event.stopPropagation();
-    const id = $(this).hide();
-    
-    
+  $(".devour_form").on("submit", function(){
     console.log("clicked");
+    event.preventDefault();
+    // console.log(event.data.value);
+    const id = $(this).children().children().text().trim();
     console.log(id);
+    $.ajax({
+      url: `/burgers/${id}`,
+      method: "PUT"
+    }).then(function(data) {
+    location.reload("/burgers");
+    });
   })
 // })
 

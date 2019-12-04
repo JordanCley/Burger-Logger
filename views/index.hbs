@@ -4,12 +4,14 @@
 
     <div class="grid-container">
         {{#each burgers}}
-        {{#if this.devoured}}
-            true
         <div>
-            <p class="burger_id">{{this.id}}.{{this.burger_name}}</p>
+            <form class="devour_form" action="">
+                <p> <span id="{{this.id}}">{{this.id}}</span> {{this.burger_name}}</p>
+                <input type="submit" class="devour">
+            </form>
+            {{!-- <p class="burger_id">{{this.id}}.{{this.burger_name}}</p>
                     
-            <button data-id="{{this.id}}" class="devour">Devour!</button>
+            <button data-id="{{this.id}}" class="devour">Devour!</button> --}}
         </div>
         <div>
             <p>
