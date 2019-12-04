@@ -12,23 +12,25 @@ router.post("/burgers/new", function(req, res){
     console.log(burger);
     Burger.create({
         burger_name: burger.name
+    }).then(function(results){
+        res.end();
     })
     // res.redirect("back");
-    res.end();
+    
 });
 
-// router.put("/:id", function(req, res){
-//     Burger.findOne({
-//         where: {
-//             id: req.params.id
-//         }
-//     })
-// }).then(result => {
-//     if(result){
-//         result.update({
-//             result.body.devour = 1;
-//         });
-//     }
-// });
+router.put("/burgers/:id", function(req, res){
+  Burger.update({
+    devoured: 1,
+  }, {
+      where: {
+          id: req.params.id,
+  }
+  }).then(function(results){
+    res.end();
+  });
+
+});
+ 
 
 module.exports = router;

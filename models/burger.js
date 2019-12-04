@@ -5,7 +5,7 @@ var sequelize = require("../config/connection.js");
 const Burger = sequelize.define("burger", {
     devoured: {
         type: Sequelize.BOOLEAN,
-        default: 0
+        defaultValue: 0
     },
     burger_name: Sequelize.STRING
 },{timestamps: false});

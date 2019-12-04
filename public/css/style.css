@@ -4,6 +4,19 @@ body {
   background-color: #fc6;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  margin: auto;
+}
+
+.devour {
+  /* margin-top: 15px; */
+  margin: 10px 20px 10px 20px;
+  /* float: right; */
+}
+
 /* #top-bar {
   margin-top: 28px;
 }
