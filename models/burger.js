@@ -1,6 +1,6 @@
 var Sequelize = require("sequelize");
 // sequelize (lowercase) references our connection to the DB.
-var sequelize = require("../config/connection.js");
+var sequelize = require("../config/config.json");
 
 const Burger = sequelize.define("burger", {
     devoured: {
