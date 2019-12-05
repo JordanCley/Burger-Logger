@@ -18,6 +18,6 @@ const sequelize = new Sequelize(
       idle: 10000
     }
   }
-);
+).catch(err => {throw err})
 
 module.exports = sequelize;
