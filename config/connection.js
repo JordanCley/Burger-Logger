@@ -2,7 +2,7 @@ const Sequelize = require("sequelize");
 require("dotenv").config();
 
 const sequelize = new Sequelize(
-  "burgers_db",
+  CLEARDB_DATABASE,
   process.env.CLEARDB_USER,
   process.env.CLEARDB_PASS,
   {
