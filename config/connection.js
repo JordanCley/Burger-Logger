@@ -2,6 +2,8 @@ const Sequelize = require("sequelize");
 const PORT = process.env.PORT || 3306;
 require("dotenv").config();
 
+
+
 const sequelize = new Sequelize(
   process.env.JAWSDB_DATABASE,
   process.env.JAWSDB_USER,
