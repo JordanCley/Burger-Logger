@@ -1,5 +1,6 @@
 const express = require("express");
-const burgerRoutes = require("./routes/burgerRoutes.js");
+const apiRoutes = require("./routes/apiRoutes.js");
+
 const hbs = require("express-handlebars");
 const path = require("path");
 
@@ -15,7 +16,9 @@ app.set("view engine", "hbs");
 
 app.use(express.static(path.join(__dirname,"/public")));
 
-app.use("/", burgerRoutes);
+app.use("/", apiRoutes);
+// app.use("/", htmlRoutes);
+
 
 
 

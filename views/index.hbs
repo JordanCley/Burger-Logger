@@ -2,26 +2,34 @@
     <img src="/images/burger.png" alt="">
     <h1>Eat-Da-Burger</h1>
 
+    <div class="container">
     <div class="grid-container">
         {{#each burgers}}
         <div>
             <form class="devour_form" action="">
-                <p> <span id="{{this.id}}">{{this.id}}</span> {{this.burger_name}}</p>
+                <p> <span>{{this.id}}</span> {{this.burger_name}}</p>
                 <input type="submit" class="devour">
             </form>
-            {{!-- <p class="burger_id">{{this.id}}.{{this.burger_name}}</p>
-                    
-            <button data-id="{{this.id}}" class="devour">Devour!</button> --}}
+    
         </div>
-        <div>
-            <p>
-                <span class="DevouredId">{{this.id}}.</span>
-                <span class="DevouredBurger">{{this.burger_name}}</span>
-            </p>
-        </div>
-
+        
         {{/each}}
     </div>
+    <div class="grid-container">
+        {{#each ateBurgers}}
+        <div>
+            <p>
+                <span>{{this.id}}</span>.
+                <span class="devouredBurger">{{this.burger_name}}</span>
+                <br>
+                <button class="delete">Delete</button>
+            </p>
+        </div>
+        {{/each}}
+    </div>
+    </div>
+        
+    
 
     <form id="addBurgerForm" action="" method="POST">
         <div>

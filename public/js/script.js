@@ -6,10 +6,10 @@ $(document).ready(function(){
     console.log(burger);
     $.ajax({
       data: {name: burger},
-      url: "/burgers/new",
+      url: "/new",
       method: "POST"
     }).then(function(data) {
-    location.reload("/burgers");
+    location.reload("/");
     });
   })
 
@@ -20,10 +20,22 @@ $(document).ready(function(){
     const id = $(this).children().children().text().trim();
     console.log(id);
     $.ajax({
-      url: `/burgers/${id}`,
+      url: `/${id}`,
       method: "PUT"
     }).then(function(data) {
-    location.reload("/burgers");
+    location.reload("/");
+    });
+  })
+
+  $(".delete").on("click", function(){
+    event.stopPropagation();
+    const id = $(this).prev().prev().prev().text().trim();
+    console.log(id);
+    $.ajax({
+      url: `/${id}`,
+      method: "DELETE"
+    }).then(function(data) {
+    location.reload("/");
     });
   })
 // })

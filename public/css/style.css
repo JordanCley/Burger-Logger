@@ -4,17 +4,24 @@ body {
   background-color: #fc6;
 }
 
-.grid-container {
+.container {
   display: grid;
   grid-template-columns: 50% 50%;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
   width: 100%;
   margin: auto;
 }
+.devouredBurger {
+  text-decoration: line-through;
+}
 
-.devour {
-  /* margin-top: 15px; */
-  margin: 10px 20px 10px 20px;
-  /* float: right; */
+
+
+.delete {
+  margin-top: 15px;
 }
 
 /* #top-bar {
