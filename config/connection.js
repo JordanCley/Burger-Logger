@@ -2,11 +2,11 @@ const Sequelize = require("sequelize");
 require("dotenv").config();
 
 const sequelize = new Sequelize(
-  CLEARDB_DATABASE,
-  process.env.CLEARDB_USER,
-  process.env.CLEARDB_PASS,
+  "heroku_d5bbb1a9560f796",
+  process.env.DB_USER,
+  process.env.DB_PASS,
   {
-    host: process.env.CLEARDB_HOST,
+    host: process.env.DB_HOST,
     port: 3306,
     dialect: "mysql",
     pool: {
