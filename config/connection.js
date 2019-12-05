@@ -3,11 +3,11 @@ const PORT = process.env.PORT || 3306;
 require("dotenv").config();
 
 const sequelize = new Sequelize(
-  "burgers_db",
-  process.env.DB_USER,
-  process.env.DB_PASS,
+  process.env.JAWSDB_DATABASE,
+  process.env.JAWSDB_USER,
+  process.env.JAWSDB_PASS,
   {
-    host: process.env.DB_HOST,
+    host: process.env.JAWSDB_HOST,
     port: PORT,
     dialect: "mysql",
     pool: {
