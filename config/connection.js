@@ -18,6 +18,8 @@ const sequelize = new Sequelize(
       idle: 10000
     }
   }
-).catch(err => {throw err})
+);
+
+sequelize.authenticate().then((result)=>{console.log(".then")}).catch((err) => {throw err})
 
 module.exports = sequelize;
