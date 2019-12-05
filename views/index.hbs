@@ -3,33 +3,33 @@
     <h1>Eat-Da-Burger</h1>
 
     <div class="container">
-    <div class="grid-container">
-        {{#each burgers}}
-        <div>
-            <form class="devour_form" action="">
-                <p> <span>{{this.id}}</span> {{this.burger_name}}</p>
-                <input type="submit" class="devour">
-            </form>
-    
+        <div class="grid-container">
+            {{#each burgers}}
+            <div>
+                <form class="devour_form" action="">
+                    <p> <span>{{this.id}}</span> {{this.burger_name}}</p>
+                    <input type="submit" class="devour">
+                </form>
+
+            </div>
+
+            {{/each}}
         </div>
-        
-        {{/each}}
-    </div>
-    <div class="grid-container">
-        {{#each ateBurgers}}
-        <div>
-            <p>
-                <span>{{this.id}}</span>.
-                <span class="devouredBurger">{{this.burger_name}}</span>
-                <br>
-                <button class="delete">Delete</button>
-            </p>
+        <div class="grid-container">
+            {{#each ateBurgers}}
+            <div>
+                <p>
+                    <span>{{this.id}}</span>.
+                    <span class="devouredBurger">{{this.burger_name}}</span>
+                    <br>
+                    <button class="delete">Delete</button>
+                </p>
+            </div>
+            {{/each}}
         </div>
-        {{/each}}
     </div>
-    </div>
-        
-    
+
+
 
     <form id="addBurgerForm" action="" method="POST">
         <div>
