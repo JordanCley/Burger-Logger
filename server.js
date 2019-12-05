@@ -14,15 +14,11 @@ app.use(express.json());
 app.engine("hbs", hbs({ defaultLayout: "main.hbs" }));
 app.set("view engine", "hbs");
 
-app.use(express.static(path.join(__dirname,"/public")));
+app.use(express.static(path.join(__dirname, "/public")));
 
 app.use("/", apiRoutes);
-// app.use("/", htmlRoutes);
-
-
-
 
 // start server
 app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+  console.log("App listening on PORT " + PORT);
+});
