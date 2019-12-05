@@ -7,7 +7,7 @@
             {{#each burgers}}
             <div>
                 <form class="devour_form" action="">
-                    <p> <span>{{this.id}}</span> {{this.burger_name}}</p>
+                    <p id="{{this.id}}">{{this.burger_name}}</p>
                     <input type="submit" class="devour">
                 </form>
 
@@ -19,8 +19,7 @@
             {{#each ateBurgers}}
             <div>
                 <p>
-                    <span>{{this.id}}</span>.
-                    <span class="devouredBurger">{{this.burger_name}}</span>
+                    <span id="{{this.id}}" class="devouredBurger">{{this.burger_name}}</span>
                     <br>
                     <button class="delete">Delete</button>
                 </p>

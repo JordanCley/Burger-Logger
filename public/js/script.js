@@ -19,9 +19,7 @@ $(document).ready(function() {
     // console.log(event.data.value);
     const id = $(this)
       .children()
-      .children()
-      .text()
-      .trim();
+      .attr("id");
     console.log(id);
     $.ajax({
       url: `/${id}`,
@@ -36,9 +34,7 @@ $(document).ready(function() {
     const id = $(this)
       .prev()
       .prev()
-      .prev()
-      .text()
-      .trim();
+      .attr("id");
     console.log(id);
     $.ajax({
       url: `/${id}`,
