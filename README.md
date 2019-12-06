@@ -9,7 +9,7 @@ you can enter in the textarea, the name of the burger you would like to eat. Onc
 
 ## Deployed
 
-![Burger-Logger](https://immense-badlands-51120.herokuapp.com/)
+[Burger-Logger](https://immense-badlands-51120.herokuapp.com/)
 
 ![Day-Planner UI](Burger.png)
 
