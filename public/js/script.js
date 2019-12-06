@@ -33,7 +33,7 @@ $(document).ready(function() {
     event.stopPropagation();
     const id = $(this)
       .prev()
-      .prev()
+      .children()
       .attr("id");
     console.log(id);
     $.ajax({

@@ -13,13 +13,14 @@ body {
   grid-template-columns: 100%;
   width: 100%;
   margin: auto;
+  padding-bottom: 10px;
 }
 .devouredBurger {
   text-decoration: line-through;
 }
 
 .delete {
-  margin-top: 15px;
+  /* margin-top: 16px; */
 }
 
 .enter_section {
