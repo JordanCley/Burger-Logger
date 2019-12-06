@@ -1,11 +1,7 @@
 {
   "development": {
-    "username": "root",
-    "password": "password",
-    "database": "burgers_db",
-    "host": "localhost",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "use_env_variable": "LOCALDB",
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
