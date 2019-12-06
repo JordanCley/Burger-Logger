@@ -1,8 +1,11 @@
+require("dotenv").config();
 const express = require("express");
 const apiRoutes = require("./routes/apiRoutes.js");
 
 const hbs = require("express-handlebars");
 const path = require("path");
+
+const db = require("./models");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -19,6 +22,9 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.use("/", apiRoutes);
 
 // start server
-app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
+db.sequelize.sync({}).then(function(){
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });
+

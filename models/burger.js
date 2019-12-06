@@ -1,15 +1,14 @@
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references our connection to the DB.
-var sequelize = require("../config/connection.js");
-
-const Burger = sequelize.define("burger", {
+// var Sequelize = require("sequelize");
+// // sequelize (lowercase) references our connection to the DB.
+// var sequelize = require("../config/connection.js");
+module.exports = function(sequelize, DataTypes) {
+const Burger = sequelize.define("Burger", {
     devoured: {
-        type: Sequelize.BOOLEAN,
+        type: DataTypes.BOOLEAN,
         defaultValue: 0
     },
-    burger_name: Sequelize.STRING
+    burger_name: DataTypes.STRING
 },{timestamps: false});
 
-Burger.sync();
-
-module.exports = Burger;
+return Burger;
+};

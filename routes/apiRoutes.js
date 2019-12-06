@@ -1,10 +1,11 @@
 const Burger = require("../models/burger.js");
 const router = require("express").Router();
+const db = require("../models");
 let ateBurgers = [];
 let burgers = [];
 
 router.get("/", function(req, res) {
-  Burger.findAll().then(result => {
+  db.Burger.findAll().then(result => {
     for (let i = 0; i < result.length; i++) {
       if (result[i].devoured === false) {
         let name = result[i];
@@ -23,7 +24,7 @@ router.get("/", function(req, res) {
 router.post("/new", function(req, res) {
   const burger = req.body;
   console.log(burger);
-  Burger.create({
+  db.Burger.create({
     burger_name: burger.name
   }).then(function(results) {
     res.end();
@@ -31,7 +32,7 @@ router.post("/new", function(req, res) {
 });
 
 router.put("/:id", function(req, res) {
-  Burger.update(
+  db.Burger.update(
     {
       devoured: 1
     },
@@ -46,7 +47,7 @@ router.put("/:id", function(req, res) {
 });
 
 router.delete("/:id", function(req, res) {
-  Burger.destroy({
+  db.Burger.destroy({
     where: {
       id: req.params.id
     }
