@@ -11,7 +11,7 @@ const sequelize = new Sequelize(
   {
     host: process.env.JAWSDB_HOST,
     port: PORT,
-    dialect: "mysql2",
+    dialect: "mysql",
     pool: {maxIdleTime: 120000}
   }
 );
